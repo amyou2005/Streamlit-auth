@@ -23,7 +23,7 @@ credentials = {'usernames': {}}
 
 Authenticator = stauth.Authenticate(credentials, cookie_name='Streamlit', key='kasira', cookie_expiry_days=4)
 
-email, authentication_status, username = Authenticator.login(':green[Login]', 'main')
+email, authentication_status, username = Authenticator.login(':pink[Login]', 'main')
 
 info, info1 = st.columns(2)
 

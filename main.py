@@ -7,19 +7,19 @@ st.set_page_config(page_title='Streamlit', page_icon='🐍', initial_sidebar_sta
 
 
 try:
-    users = fetch_users()
-    emails = []
-    usernames = []
-    passwords = []
+    # users = fetch_users()
+    # emails = []
+    # usernames = []
+    # passwords = []
 
-    for user in users:
-        emails.append(user['key'])
-        usernames.append(user['username'])
-        passwords.append(user['password'])
+    # for user in users:
+    #     emails.append(user['key'])
+    #     usernames.append(user['username'])
+    #     passwords.append(user['password'])
 
-    credentials = {'usernames': {}}
-    for index in range(len(emails)):
-        credentials['usernames'][usernames[index]] = {'name': emails[index], 'password': passwords[index]}
+    # credentials = {'usernames': {}}
+    # for index in range(len(emails)):
+    #     credentials['usernames'][usernames[index]] = {'name': emails[index], 'password': passwords[index]}
 
     Authenticator = stauth.Authenticate(credentials, cookie_name='Streamlit', key='kasira', cookie_expiry_days=4)
 
@@ -30,9 +30,9 @@ try:
     if not authentication_status:
         sign_up()
 
-    if username:
-        if username in usernames:
-            if authentication_status:
+    # if username:
+    #     if username in usernames:
+    #         if authentication_status:
                 # let User see app
                 st.sidebar.subheader(f'Welcome {username}')
                 Authenticator.logout('Log Out', 'sidebar')
@@ -46,14 +46,14 @@ try:
                     """
                 )
 
-            elif not authentication_status:
-                with info:
+            # elif not authentication_status:
+            #     with info:
                     st.error('Incorrect Password or username')
-            else:
-                with info:
+            # else:
+            #     with info:
                     st.warning('Please feed in your credentials')
-        else:
-            with info:
+        # else:
+        #     with info:
                 st.warning('Username does not exist, Please Sign up')
 
 

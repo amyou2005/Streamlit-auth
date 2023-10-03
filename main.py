@@ -6,7 +6,7 @@ from dependancies import sign_up, fetch_users
 st.set_page_config(page_title='Streamlit', page_icon='🐍', initial_sidebar_state='collapsed')
 
 
-try:
+# try:
     # users = fetch_users()
     # emails = []
     # usernames = []
@@ -57,5 +57,5 @@ try:
     st.warning('Username does not exist, Please Sign up')
 
 
-except:
-    st.success('Refresh Page')
+# except:
+#     st.success('Refresh Page')

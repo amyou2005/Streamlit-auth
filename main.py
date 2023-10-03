@@ -17,7 +17,7 @@ st.set_page_config(page_title='Streamlit', page_icon='🐍', initial_sidebar_sta
     #     usernames.append(user['username'])
     #     passwords.append(user['password'])
 
-    # credentials = {'usernames': {}}
+    credentials = {'usernames': {}}
     # for index in range(len(emails)):
     #     credentials['usernames'][usernames[index]] = {'name': emails[index], 'password': passwords[index]}
 
